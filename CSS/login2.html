@@ -15,19 +15,22 @@ body:before {
     position: fixed;
     width: 50vw;
     height: 70vh;
-    background-image: url(https://i.postimg.cc/8cf6v1rk/1.jpg);
+    background-image: url(https://images.inc.com/uploaded_files/image/1920x1080/getty_690028746_284206.jpg);
     background-position: center center;
     justify-content: center;
     -webkit-background-size: cover;
     background-size: cover;
-    -webkit-filter: blur(10px);
+    /* -webkit-filter: blur(10px);
     -moz-filter: blur(10px);
-    filter: blur(10px);
+    filter: blur(10px); */
     text-align: center;
     left:320px;
     bottom: 14%;
-    
+    opacity: rgba(255,255,255);
 }
+
+
+
 .contact-form {
     position: absolute;
     top: 50%;
@@ -64,21 +67,24 @@ body:before {
     width: 100%;
     margin-bottom: 5px;
 }
-.contact-form input[type=email], .contact-form input[type=password] {
+.contact-form form input {
     border: none;
     border-bottom: 1px solid #fff;
-    background: lightcyan;
+    background-color:transparent;
     outline: none;
     height: 40px;
-    color: #fff;
+    color: blueviolet;
     font-size: 16px;
 }
+
+.contact-form form input::placeholder {
+    color: red;
+}
+
 .contact-form input[type=submit] {
     height: 30px;
-    color: blue;
-    font-size: 20px;
-    background:blue;
-    cursor: pointer;
+   font-size: 20px;
+   cursor: pointer;
     border-radius: 25px;
     border: none;
     outline: none;
@@ -91,8 +97,16 @@ body:before {
     text-decoration: none;
 }
 input[type=checkbox] {
-    width: 10%;
+    
+    width: 5%;
+    bottom: 5%;
 }
+
+
+button:hover {
+   color:blue;
+}
+
     </style>
 </head>
 <body>
@@ -100,11 +114,11 @@ input[type=checkbox] {
         <img alt="" class="avatar" src="https://i.postimg.cc/zDyt7KCv/a1.jpg">
         <h2>Login Window</h2>
         <form action="">
-            <p>Email</p><input placeholder="your Email" type="email">
-            <p>Password</p><input placeholder="your Password" type="password"><br>
+            <input placeholder="Email" type="email">
+            <input placeholder="Password" type="password">
             
-            <p><input type="checkbox">Agree terms & conditions</p>
-            <center><input type="button" value="Login"></center>
+            <input type="checkbox"><u>Agree terms & conditions</u>
+            <center><button type="submit">LOGIN</button></center>
         </form>
     </div>
 </body>
