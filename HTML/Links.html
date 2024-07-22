@@ -1,12 +1,37 @@
 <html>
     <head>
         <title>Login Page</title>
+        <style>
+            a{
+                text-decoration: none;
+                font-weight: bold;
+                color: green;
+            }
+            a:hover{
+                color:red;
+
+            }
+            .MyList{
+                list-style-type: circle;
+                
+            }
+        li{
+            background-color: aquamarine;
+            padding:5px;
+            border-bottom: 2px solid silver;
+        }
+        li:hover{/* to change the background color for the link*/
+           background-color:pink;
+
+        }
+        </style>
     </head>
     <body>
         <br><br>
-        <ul>
-            <li><a href="Login.html" target="content">login</a></li>
-            <li><a href="Registration.html" target="content">registration</a></li>
+        
+        <ul class="MyList">
+            <li><a href="Login.html" target="content">Login</a></li>
+            <li><a href="Registration.html" target="content">Registration</a></li>
         </ul>
     </body>
 </html>
