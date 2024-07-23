@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upper Left Triangle Pattern</title>
+    <script>
+        function pattern() {
+            let n1 = parseInt(document.getElementById("n1").value); 
+            let a= ""; 
+            
+            for (let i = 1; i <= n1; i++) {
+                for (let j = 1; j <= i; j++) {
+                    a += "* ";
+                }
+                a  += "<br>"; 
+            }
+
+            document.getElementById("ResultDiv").innerHTML = a;
+        }
+    </script>
+</head>
+<body>
+    pattern:<input type="text" id="n1"><br><br>
+    <button onclick="pattern()">Pattern</button><br><br>
+    <div id="ResultDiv"></div>
+</body>
+</html>

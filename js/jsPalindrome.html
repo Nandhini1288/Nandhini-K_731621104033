@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Palindrome or Not</title>
+    <script>
+        function isPalindrome() {
+            let n1 = parseInt(document.getElementById("n1").value); 
+            
+            let result = ""; 
+            
+            function checkPalindrome(number) {
+                if (number < 0) {
+                    return false; 
+                }
+                let c= number;
+                let b = 0;
+                   while (number > 0) {
+                    let a= number % 10;
+                    b = b * 10 + a;
+                    number = Math.floor(number / 10);
+                }
+                
+                return c === b;
+            }
+        
+            if (checkPalindrome(n1)) {
+                result = n1 + " is a palindrome.";
+            } else {
+                result = n1 + " is not a palindrome.";
+            }
+         
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    Enter a Number:<input type="text" id="n1" ><br>
+    <br>
+    <button onclick="isPalindrome()">Check Palindrome</button><br><br>
+    <div id="result"></div>
+</body>
+</html>
