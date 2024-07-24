@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>String Length</title>
+    <title>String Operations</title>
     <script>
         function myFunction() {
-            var str= "string";
-            var str1="hello"; 
-            var a=str.length;
-            var b=str.charAt(1);
-            var c=str.slice(2,5);
-            var d=str.substring(2);
-            var e=str.substr(2,5);
-            var f=str.toUpperCase();
-            var g=str.toLowerCase();
-            var h=str.concat(str1);
-            var i=str.trim();
-            var j=str.trimStart();
-            var k=str.repeat(2);
-            var l=str.replace("string","hello");
-            var m=str.replaceAll("string","helloall");
-            var n=str.split("r"); 
-
-
-            var b1=a +"<br>"+b+"<br>"+c+"<br>"+d+"<br>"+e+"<br>"+f+"<br>"+g+"<br>"+h+"<br>"+i+"<br>"+j+"<br>"+k+"<br>"+l+"<br>"+m+"<br>"+n;
-            document.getElementById("result").innerHTML = b1;
-            
+            var str = document.getElementById("str").value;
+            var str1 = document.getElementById("str1").value;
+            var a = str.length;
+            alert(a);
+            var b = str.charAt(1); 
+            alert(b);
+            var c = str.slice(2, 5);
+            alert(c);
+            var d = str.substring(2);
+            alert(d);
+            var e = str.substr(2, 5);
+            alert(e);
+            var f = str.toUpperCase();
+            alert(f);
+            var g = str.toLowerCase();
+            alert(g)
+            var h = str.concat(str1);
+            alert(h)
+            var i = str.trim();
+            alert(i)
+            var j = str.trimStart();
+            alert(j)
+            var k = str.repeat(2);
+            alert(k)
+            var l = str.replace("str", "hello");
+            alert(l)
+            var m = str.replaceAll("str", "helloall");
+            alert(m)
+            var n = str.split("r");
+            alert(n)
+           
         }
-         </script> 
-         </head>  
-         <body>
-            Strings<input type="text" id="str"><br><br>
-            <button onclick="myFunction()">String</button><br><br>
-            <div id="result"></div>
-        </body>
-
+    </script>
+</head>
+<body>
+    <h2>Enter Strings:</h2>
+    <input type="text" id="str" placeholder="Enter string..."><br><br>
+    <input type="text" id="str1" placeholder="Enter second string..."><br><br>
+    <button onclick="myFunction()">Perform String Operations</button>
+    <div id="result"></div>
+</body>
 </html>

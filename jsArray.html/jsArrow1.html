@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>arrays</title>
+        <script>
+          
+             /*without passing an argument*/ 
+             const sum =() =>(10+20);
+                document.write("Addition:"+sum());
+                 /*with passing an argument to the variables */ 
+                const sub=(a,b) =>(a-b);
+                document.write("<br><br>Subraction:"+sub(100,20));
+                 /*with passing an argument to the variables */
+                 const mul=(a,b) =>{return(a*b)};
+                 document.write("<br><br>Multiplication:"+mul(100,20));
+                 /*with passing an argument*/ 
+                 const div=(a,b) =>(a/b);
+                 document.write("<br><br>Division:"+div(100,20));
+                 /*Arrow functions in if else conditions*/
+                 const big=(x,y) =>{
+                    if(x>y)
+                    return x;
+                else
+                return y;
+                 };
+             document.write("<br><br>Biggest Number :"+big(50,20));
+             /* factorial*/
+                 const big1=(x) =>{
+                 let i;
+                 fact=1;
+                 for(i=2;i<=x;i++){
+                    fact=fact*i;
+                 }
+                    return fact;
+                    
+                 }
+                 document.write("<br><br>factorial:"+big1(6));
+                 
+        </script>
+        <body></body>
+    </head>
+</html>

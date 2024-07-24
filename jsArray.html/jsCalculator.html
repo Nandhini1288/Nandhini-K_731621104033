@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <CENTER>   <h1>CALCULATOR</h1></CENTER><BR><BR>
+    <!-- For styling -->
+    <style>
+        table {
+            border: 15px solid grey;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 20px 40px;
+            background-color: aquamarine;
+            color: grey;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+
+        input[type="text"] {
+            padding: 30px 60px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid gray;
+            background-color: white; 
+            cursor: pointer;
+        }
+
+        input[type="text"]{
+            background-color: palevioletred; 
+            /*cursor: pointer;*/
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Create table -->
+    <table id="calcu">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="result" readonly>
+            </td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="c" onclick="clearDisplay()"></td>
+            <td><input type="button" value="%" onclick="Display('%')"></td>
+            <td><input type="button" value="<=" onclick="backspace()"></td>
+            <td><input type="button" value="/" onclick="Display('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="Display('7')"></td>
+            <td><input type="button" value="8" onclick="Display('8')"></td>
+            <td><input type="button" value="9" onclick="Display('9')"></td>
+            <td><input type="button" value="*" onclick="Display('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="Display('4')"></td>
+            <td><input type="button" value="5" onclick="Display('5')"></td>
+            <td><input type="button" value="6" onclick="Display('6')"></td>
+            <td><input type="button" value="-" onclick="Display('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="Display('1')"></td>
+            <td><input type="button" value="2" onclick="Display('2')"></td>
+            <td><input type="button" value="3" onclick="Display('3')"></td>
+            <td><input type="button" value="+" onclick="Display('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="00" onclick="Display('00')"></td>
+            <td><input type="button" value="0" onclick="Display('0')"></td>
+            <td><input type="button" value="." onclick="Display('.')"></td>
+            <td><input type="button" value="=" onclick="calculate()"></td>
+        </tr>
+    </table>
+
+    <script>
+        function Display(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('result').value = '';
+        }
+
+        function backspace() {
+            let currentValue = document.getElementById('result').value;
+            document.getElementById('result').value = currentValue.slice(0, -1);
+        }
+
+        function calculate() {
+            let expression = document.getElementById('result').value;
+            if (expression) {
+                try {
+                    let result = eval(expression);
+                    document.getElementById('result').value = result;
+                } catch (error) {
+                    document.getElementById('result').value = '';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
