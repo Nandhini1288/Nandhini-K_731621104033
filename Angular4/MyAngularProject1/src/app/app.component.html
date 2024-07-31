@@ -1,0 +1,23 @@
+<h1 [ngClass]="myClass">Structural & Attribute</h1>
+<br>
+<button (click)="changeFlag">Show or Hide Div</button>
+<br><br>
+<div *ngIf="flag" [ngStyle]="myStyle">
+  <br>
+  <ul>
+    <li *ngFor="let vec of vehicles" (click)="setSelectedItem(vec)">{{vec}}
+
+    </li>
+  </ul>
+  <br>
+  <b>You have selected:{{selectedvehicle}}</b>
+  <br>
+  <div [ngSwitch]="selectedvehicle">
+    <font color="green" *ngSwitchCase="'Twowheeler'">Bike</font>
+    <font color="green" *ngSwitchCase="'Threewheeler'">Auto</font>
+    <font color="green" *ngSwitchCase="'Fourwheeler'">Car</font>
+    <font color="green" *ngSwitchDefault>Invalid</font>
+  </div>
+  <br><br>
+  <button (click)="changeStyle()">Change Style</button>
+</div>
