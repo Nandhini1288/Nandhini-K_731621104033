@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Student Result Management System</title>
+    <style>
+        body, h1, p, form, input, button, table, th, td {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            max-width: 800px; 
+            color: black;
+            padding: 10px 0;
+            text-align: center;
+            margin: 0 auto; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px; 
+            width: 100%; 
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%; 
+            max-width: 350px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group button {
+            background: rosybrown;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ksriet results portal</h1>
+    </header>
+    <div class="container">
+        <h2 id="form-title">Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="register-number">Register Number:</label>
+                <input type="text" id="register-number" name="register-number" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary">find</button>&nbsp;
+                <button type="button" class="btn btn-success">findall</button>&nbsp;
+                <button type="button" class="btn btn-info">Insert</button>&nbsp;
+                <button type="button" class="btn btn-info">Delete</button>&nbsp;
+                <button type="button" class="btn btn-info">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
