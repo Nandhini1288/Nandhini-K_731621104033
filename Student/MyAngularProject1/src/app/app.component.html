@@ -2,12 +2,6 @@
 <head>
     <title>Student Result Management System</title>
     <style>
-        body, h1, p, form, input, button, table, th, td {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -17,6 +11,9 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         header {
@@ -26,9 +23,6 @@
             padding: 10px 0;
             text-align: center;
             margin: 0 auto; 
-        }
-
-        header h1 {
             margin: 0;
             font-size: 24px;
         }
@@ -59,8 +53,8 @@
         }
 
         .form-group input {
-            width: 100%; 
-            max-width: 350px;
+            width: 450px; 
+            max-width: 450px;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -83,7 +77,8 @@
 </head>
 <body>
     <header>
-        <h1>ksriet results portal</h1>
+        <img src="data:image/png;base64,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" width="80px" height="80px">
+        <h1>KSRIET Results Portal</h1>
     </header>
     <div class="container">
         <h2 id="form-title">Login</h2>
