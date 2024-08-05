@@ -3,10 +3,9 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { StudentService} from './student.service';
+import { EmployeeService } from './employee.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +15,14 @@ import { StudentService} from './student.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-   HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [
     provideClientHydration(),
-    StudentService,
-    HttpClientModule,
-   
+    EmployeeService,
+    HttpClientModule
+    
   ],
   bootstrap: [AppComponent]
 })

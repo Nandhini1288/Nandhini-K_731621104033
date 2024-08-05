@@ -4,14 +4,14 @@
     </head>
 
     <body>
-        <h1>Student Result Management System</h1>
+        <h1>Employee Management System</h1>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10">
                              <form #myForm="ngForm">
                                 <div class="form-group">
-                                    <label for="Student Id">
-                                        Student Id
+                                    <label for="Employee Id">
+                                        Employee Id
                                     </label>
                                     <input type="text" 
                                            class="form-control" 
@@ -25,11 +25,11 @@
                                 </div>
                                 <div *ngIf="id.touched">
                                   <div *ngIf="id.errors?.['required']">
-                                    <b style="color: red;">Student Id is  Required.</b>
+                                    <b style="color: red;">Empoyee Id is not Required.</b>
 
                                   </div>
                                   <div *ngIf="id.errors?.['pattern']">
-                                    <b color="red"><b>Invalid Student Id.</b></b>
+                                    <b color="red"><b>Invalid Employee Id.</b></b>
                                   </div>
                                 </div>
 
@@ -37,71 +37,69 @@
 
 
                                 <div class="form-group">
-                                    <label for="Student Name">
-                                        Student Name
+                                    <label for="Employee Name">
+                                        Employee Name
                                     </label>
                                     <input type="text" 
                                            class="form-control" 
-                                           name="studentName" 
-                                           #studentName="ngModel" ngModel
+                                           name="empName" 
+                                           #empName="ngModel" ngModel
                                            required
                                            pattern="[A-Z,a-z]+"
                                             />
                                 </div>
 
-                                <div *ngIf="studentName.touched">
-                                  <div *ngIf="studentName.errors?.['required']">
-                                    <b style="color: red;">Student Name is Required.</b>
+                                <div *ngIf="empName.touched">
+                                  <div *ngIf="empName.errors?.['required']">
+                                    <b style="color: red;">Empoyee Name is not Required.</b>
 
                                   </div>
-                                  <div *ngIf="studentName.errors?.['pattern']">
-                                    <b color="red"><b>Invalid Student Name.</b></b>
+                                  <div *ngIf="empName.errors?.['pattern']">
+                                    <b color="red"><b>Invalid Employee Name.</b></b>
                                   </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label for="Student Grade">
-                                        Student Grade
+                                    <label for="Employee Salary">
+                                        Employee Salary
                                     </label>
                                     <input type="text" 
                                            class="form-control" 
-                                           name="studentGrade" 
-                                           #studentGrade="ngModel" ngModel
+                                           name="empSalary" 
+                                           #empSalary="ngModel" ngModel
                                            required
-                                           pattern="[A-D]+"
+                                           pattern="[0-9]+"
                                            />
                                 </div>
                                           
-                                <div *ngIf="studentGrade.touched">
-                                  <div *ngIf="studentGrade.errors?.['required']">
-                                    <b style="color: red;">Student Grade is  Required.</b>
+                                <div *ngIf="empSalary.touched">
+                                  <div *ngIf="empSalary.errors?.['required']">
+                                    <b style="color: red;">Empoyee Salary is not Required.</b>
 
                                   </div>
-                                  <div *ngIf="studentGrade.errors?.['pattern']">
-                                    <b color="red"><b>Invalid Student Grade.</b></b>
+                                  <div *ngIf="empSalary.errors?.['pattern']">
+                                    <b color="red"><b>Invalid Employee Salary.</b></b>
                                   </div>
                                 </div>
 
 
-                                <button class="btn btn-success" (click)="insertStudent(myForm.value)">
+                                <button class="btn btn-success" (click)="insertEmployee(myForm.value)">
                                     Insert 
                                 </button>
                             &nbsp;&nbsp;
-                                <button class="btn btn-primary"  (click)="updateStudent(myForm.value)">
+                                <button class="btn btn-primary"  (click)="updateEmployee(myForm.value)">
                                     Update 
                                 </button>&nbsp;&nbsp;
-                                <button class="btn btn-danger" (click)="deleteStudent(myForm.value)">
+                                <button class="btn btn-danger" (click)="deleteEmployee(myForm.value)">
                                     Delete 
                                 </button>
-                                <br>
-                                &nbsp;&nbsp;<br>
-                          
-                               <!---- <button class="btn btn-warning" (click)="findStudent(myForm.value)">
+                                <br><br>
+                               <button class="btn btn-warning" (click)="findEmployee(myForm.value)">
                                     Find 
                                 </button>
-                                &nbsp;&nbsp;!-->
-                                <button class="btn btn-info" (click)="findAllStudent()">
+                                &nbsp;&nbsp;
+                                <button class="btn btn-info" (click)="findAllEmployee()">
                                     Find All
                                 </button>
                             </form>
@@ -113,9 +111,9 @@
          <h3>{{result}}</h3>
          <div style="width: 100%;" *ngIf="flag">
           <table width="80%" align="center" class="table table-borderd">
-           <tr><th>Student Id</th><th>Student Name</th><th>Student Grade</th></tr> 
-            <tr *ngFor="let emp of studentArr">
-                <td> {{student.id}} </td><td> {{student.studentName}} </td><td> {{student.studentGrade}} </td>
+           <tr><th>Employee Id</th><th>Employee Name</th><th>Employee Salary</th></tr> 
+            <tr *ngFor="let emp of employeeArr">
+                <td> {{emp.id}} </td><td> {{emp.empName}} </td><td> {{emp.empSalary}} </td>
             </tr>
          </table>
          </div>

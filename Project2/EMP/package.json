@@ -1,5 +1,5 @@
 {
-  "name": "my-angular-project1",
+  "name": "emp",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:MyAngularProject1": "node dist/my-angular-project1/server/server.mjs"
- ,   "json-server": "json-server --watch db.json --port 3004"
+    "serve:ssr:EMP": "node dist/emp/server/server.mjs",
+    "json-server": "json-server --watch db.json --port 3004"
   },
   "private": true,
   "dependencies": {
