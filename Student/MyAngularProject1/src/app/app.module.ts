@@ -16,7 +16,7 @@ import { StudentService} from './student.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-   HttpClientModule
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),

@@ -4,11 +4,11 @@ import { StudentService } from './student.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl:'./app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'EMS';
+  title = 'Student Result Management System';
   student:Student;
   result:string;
   studentArr:Student[];
@@ -38,7 +38,7 @@ export class AppComponent {
 deleteStudent(data:any){
   this.result=this.service.deleteStudent(data.id);
 }
-findEmployee(data:any){
+findStudent(data:any){
   this.student=this.service.findStudent(data.id);
   this.result=this.student.id+" "+this.student.studentName+" "+this.student.studentGrade;
 }

@@ -1,6 +1,19 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <style>
+        .container{
+          width:50%;
+      }
+      body {
+    background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-landscape-jpg-wallpapers-free-download-picture-image_2668463.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height:100%;
+}
+
+    </style>
     </head>
 
     <body>
@@ -46,7 +59,7 @@
                                            #studentName="ngModel" ngModel
                                            required
                                            pattern="[A-Z,a-z]+"
-                                            />
+                                             />
                                 </div>
 
                                 <div *ngIf="studentName.touched">
@@ -82,8 +95,6 @@
                                     <b color="red"><b>Invalid Student Grade.</b></b>
                                   </div>
                                 </div>
-
-
                                 <button class="btn btn-success" (click)="insertStudent(myForm.value)">
                                     Insert 
                                 </button>
@@ -94,16 +105,15 @@
                                 <button class="btn btn-danger" (click)="deleteStudent(myForm.value)">
                                     Delete 
                                 </button>
-                                <br>
-                                &nbsp;&nbsp;<br>
-                          
-                               <!---- <button class="btn btn-warning" (click)="findStudent(myForm.value)">
+                                &nbsp;&nbsp;
+                                <button class="btn btn-warning" (click)="findStudent(myForm.value)">
                                     Find 
                                 </button>
-                                &nbsp;&nbsp;!-->
+                                &nbsp;&nbsp;
                                 <button class="btn btn-info" (click)="findAllStudent()">
                                     Find All
                                 </button>
+                              
                             </form>
                             
                         </div>
